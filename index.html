@@ -85,9 +85,11 @@
 		}else if (y + dy + ballRadius > canvas.height){
 			if((x > paddleX) && (x < paddleX + paddleWidth){
 				dy = -dy;
-			{
-			alert("GAME OVER");
-			document.location.reload();
+			}
+			else {
+				alert("GAME OVER");
+				document.location.reload();
+			}
 		}
 		
 		<!-- Collision - Both sides edge canvas  -->
