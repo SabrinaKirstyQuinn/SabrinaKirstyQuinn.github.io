@@ -14,8 +14,8 @@
 </head>
 
 <body>
-<h1> hey <h1>
-<p1> Still builing - hold on. <p1>
+<h1> Hey <h1>
+<p1> Currently Under Construction - hold on. <p1>
 
 <canvas id="myCanvas" width="480" height="320"></canvas>
 
@@ -29,17 +29,33 @@
 	var y = canvas.height-30;
 	var dx = 2;
 	var dy = -2;
+	var ballRadius = 10;
+	
+	function drawball(){
+		ctx.beginPath();
+		ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+		ctx.fillStyle = "#0095DD";
+		ctx.fill();
+		ctx.closePath();
+	}
 
 	function draw(){
-	ctx.beginPath();
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	ctx.arc(x, y, 50, 10, 0, Math.PI*2);
-	ctx.fillStyle = "#0095DD";
-	ctx.fill();
-	ctx.closePath();
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		drawball();
+
+		<!-- Collision - top or bottom edge canvas  -->
+		if((y + dy <0) || (y + dy > canvas.height) ){
+			dy = -dy;
+		}
+		
+		<!-- Collision - Both sides edge canvas  -->
+		if((x + dx <0) || (x + dx > canvas.width) ){
+			dx = -dx;
+		}
+		
 	x += dx;
     y += dy;
-	}
+}	
 	setInterval(draw, 10);
 
 </script>
