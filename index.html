@@ -44,12 +44,12 @@
 		drawball();
 
 		<!-- Collision - top or bottom edge canvas  -->
-		if((y + dy <0) || (y + dy > canvas.height) ){
+		if((y + dy + ballRadius <0) || (y + dy + ballRadius > canvas.height) ){
 			dy = -dy;
 		}
 		
 		<!-- Collision - Both sides edge canvas  -->
-		if((x + dx <0) || (x + dx > canvas.width) ){
+		if((x + dx + ballRadius <0) || (x + dx + ballRadius > canvas.width) ){
 			dx = -dx;
 		}
 		
