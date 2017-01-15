@@ -1,0 +1,13 @@
+ /* Author : SKQ */
+
+body {
+	background-color: powderblue;
+}
+
+h1 { 
+	color: blue;
+	font-family: verdana;
+	font-size: 300%;
+	border: 1px solid powderblue;
+	padding: 30xp;
+}
