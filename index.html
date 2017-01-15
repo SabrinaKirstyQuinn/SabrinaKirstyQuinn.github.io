@@ -36,8 +36,6 @@
 	var rightPressed = false;
 	var leftPressed = false;
 	
-	
-	
 	document.addEventListener("keydown", keyDownHandler, false);
 	document.addEventListener("keyup", keyUpHandler, false);
 	
@@ -82,8 +80,14 @@
 		drawPaddle();
 
 		<!-- Collision - top or bottom edge canvas  -->
-		if((y + dy - ballRadius <0) || (y + dy + ballRadius > canvas.height) ){
+		if(y + dy + ballRadius <0){
 			dy = -dy;
+		}else if (y + dy + ballRadius > canvas.height){
+			if((x > paddleX) && (x < paddleX + paddleWidth){
+				dy = -dy;
+			{
+			alert("GAME OVER");
+			document.location.reload();
 		}
 		
 		<!-- Collision - Both sides edge canvas  -->
