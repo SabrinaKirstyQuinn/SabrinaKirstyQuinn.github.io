@@ -1,5 +1,7 @@
  /* Author : SKQ */
 
+ 
+/* Body */
 body {
 		background: #ffffff;
     font-family: 'Source Sans Pro', sans-serif;
@@ -17,6 +19,7 @@ html {
   font-size: 100%;
 }
 
+/* typography */
 h1,h2,h3,h4 {
   font-weight: 400;
   letter-spacing: 0.3rem;
