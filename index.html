@@ -17,6 +17,8 @@
 <h1> Hey <h1>
 <p1> Currently Under Construction - hold on. <p1>
 
+<h2>  A </h2>
+
 <canvas> height = "1080" width = "920" </canvas>
 
 <!-- code for game -->
@@ -24,7 +26,7 @@
   var cx = document.querySelector("canvas").getContext("2d");
   var img = document.createElement("img");
   img.src = "NewGirl.png";
-  var spriteW = 256, spriteH = 3072;
+  var spriteW = 42, spriteH = 60;
   img.addEventListener("load", function() {
     var cycle = 0;
     setInterval(function() {
@@ -33,7 +35,7 @@
                    // source rectangle
                    cycle * spriteW, 0, spriteW, spriteH,
                    // destination rectangle
-                   0,               0, spriteW, spriteH);
+                   0, 0, spriteW, spriteH);
       cycle = (cycle + 1) % 12;
     }, 300);
   });
