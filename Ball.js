@@ -2,7 +2,6 @@
 <!-- code for game -->
 <script type="text/javascript">
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
 
 	<!-- Allow rendering of graphics on canvas element -->
 	var canvas = document.getElementById("myCanvas");
