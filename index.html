@@ -25,6 +25,25 @@
 	var canvas = document.getElementById("myCanvas");
 	var ctx = canvas.getContext("2d");
 	
+	var img = document.createElement("img");
+	img.src = "img/NewGirl.png";
+	var spriteW = 32, spriteH = 32;
+	
+	img.addEventListener("load", function() {
+    var cycle = 0;
+    setInterval(function() {
+      cx.clearRect(0, 0, spriteW, spriteH);
+      cx.drawImage(img,
+                   // source rectangle
+                   cycle * spriteW, 0, spriteW, spriteH,
+                   // destination rectangle
+                   0,               0, spriteW, spriteH);
+      cycle = (cycle + 1) % 8;
+    }, 120);
+  });
+	
+	
+	
 	var x = canvas.width/2;
 	var y = canvas.height-30;
 	var dx = 2;
