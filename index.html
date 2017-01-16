@@ -21,15 +21,11 @@
 
 <!-- code for game -->
 <script>
-	<!-- Allow rendering of graphics on canvas element -->
-	var canvas = document.getElementById("myCanvas");
-	var ctx = canvas.getContext("2d");
-	
-	var img = document.createElement("NewGirl.png");
-	img.src = "img/NewGirl.png";
-	var spriteW = 32, spriteH = 32;
-	
-	img.addEventListener("load", function() {
+  var cx = document.querySelector("canvas").getContext("2d");
+  var img = document.createElement("img");
+  img.src = "img/NewGirl.png";
+  var spriteW = 24, spriteH = 30;
+  img.addEventListener("load", function() {
     var cycle = 0;
     setInterval(function() {
       cx.clearRect(0, 0, spriteW, spriteH);
