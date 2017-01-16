@@ -17,14 +17,14 @@
 <h1> Hey <h1>
 <p1> Currently Under Construction - hold on. <p1>
 
-<canvas></canvas>
+<canvas> height = "280" width = "300" </canvas>
 
 <!-- code for game -->
 <script>
   var cx = document.querySelector("canvas").getContext("2d");
   var img = document.createElement("img");
   img.src = "NewGirl.png";
-  var spriteW = 256, spriteH = 3072;
+  var spriteW = 32, spriteH = 32;
   img.addEventListener("load", function() {
     var cycle = 0;
     setInterval(function() {
