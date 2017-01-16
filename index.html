@@ -24,7 +24,7 @@
   var cx = document.querySelector("canvas").getContext("2d");
   var img = document.createElement("img");
   img.src = "NewGirl.png";
-  var spriteW = 96, spriteH = 128;
+  var spriteW = 256, spriteH = 3072;
   img.addEventListener("load", function() {
     var cycle = 0;
     setInterval(function() {
@@ -35,7 +35,7 @@
                    // destination rectangle
                    0,               0, spriteW, spriteH);
       cycle = (cycle + 1) % 12;
-    }, 10);
+    }, 160);
   });
 	
 </script>
