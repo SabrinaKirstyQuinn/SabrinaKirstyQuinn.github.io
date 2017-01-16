@@ -1,0 +1,3 @@
+useful notes 
+
+http://eloquentjavascript.net/16_canvas.html
