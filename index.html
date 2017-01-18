@@ -17,16 +17,16 @@
 <h1> Hey <h1>
 <p1> Currently Under Construction - hold on. <p1>
 
-<h2> b </h2>
+<h2> c </h2>
 
-<canvas id="canvas" height = "480" width = "920" > </canvas>
+<canvas id="canvas" height = "400" width = "280" > </canvas>
 
 <!-- code for game -->
 <script>
   var cx = document.querySelector("canvas").getContext("2d");
   var img = document.createElement("img");
   img.src = "NewGirl.png";
-  var spriteW = 100, spriteH = 240;
+  var spriteW = 256, spriteH = 240;
   img.addEventListener("load", function() {
     var cycle = 0;
     setInterval(function() {
@@ -36,8 +36,8 @@
                    cycle * spriteW, 0, spriteW, spriteH,
                    // destination rectangle
                    0, 0, spriteW, spriteH);
-      cycle = (cycle + 1) % 12;
-    }, 400);
+      cycle = (cycle + 256) % 12;
+    }, 160);
   });
 	
 </script>
