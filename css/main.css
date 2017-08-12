@@ -38,6 +38,25 @@ ul.posts {
     font-size: 1.5em;
 }
 
+
+//game related
+ #welcomeScreen{
+                width: 700px; 
+                height: 250px; 
+                position: absolute; 
+                z-index: 100; 
+                background-image: url(logo.png); 
+                font-family: verdana, sans-serif;
+              }
+              #loadingBar{
+                position: relative;
+                left: 100px; 
+                height: 15px; 
+                width: 0px; 
+                background: red;
+              }
+
+
 ul.posts li {
     list-style: none;
 }
