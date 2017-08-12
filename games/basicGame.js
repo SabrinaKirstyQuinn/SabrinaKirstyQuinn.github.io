@@ -9,23 +9,10 @@ var smallStarSpeed        = 1; //pixels per frame
 var mediumStarSpeed       = 3; //pixels per frame
     
 var bigStarSpeed          = 5; //pixels per frame
-
-
-//Initialise the game
-$(“#playground”).playground(height: PLAYGROUND_HEIGHT, 
-        width: PLAYGROUND_WIDTH, 
-        keyTracker: true});
-  
-//Set id of loading bar
-$().setLoadBar("loadingBar", 400);
-
-//initialize the start button
-$("#startbutton").click(function(){
-$.playground().startGame(function(){
-$("#welcomeScreen").remove();
-});
-})
-
+    
+// --------------------------------------------------------------------
+// --                      the main declaration:                     --
+// --------------------------------------------------------------------
 
 $(function(){
     // Animations declaration: 
@@ -75,8 +62,18 @@ $(function(){
                                    height: PLAYGROUND_HEIGHT, 
                                    posx: PLAYGROUND_WIDTH})
     
+    
+    // this sets the id of the loading bar:
+    $().setLoadBar("loadingBar", 400);
 
-
+    //initialize the start button
+    $("#startbutton").click(function(){
+        $.playground().startGame(function(){
+            $("#welcomeScreen").remove();
+        });
+    })
+    
+    
     //This is for the background animation
     $.playground().registerCallback(function(){
     //Offset all the pane:
